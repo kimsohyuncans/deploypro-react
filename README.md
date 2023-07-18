@@ -1,6 +1,6 @@
-# Example React Docker
+# [DeployPRO](https://deploypro.dev/) `React Sample` 
 
-This is a `Hello World`` app that is written in Javascript using [React](https://reactjs.org/) framework.
+Minimal `React Sample` provided by [DeployPRO](https://deploypro.dev/) service for testing.
 
 <br />
 
