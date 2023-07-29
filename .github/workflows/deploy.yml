@@ -16,8 +16,10 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          timeout: 30m
+          command_timeout: 30m
           script: |
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/671374853:latest
-            sudo docker stop testreactrizky
-            sudo docker rm testreactrizky
-            sudo docker run -d -p 3000:3000 --name testreactrizky --env-file ~/.appseed/.env.671374853 ${{ secrets.DOCKERHUB_USERNAME }}/671374853
+            sudo docker stop local
+            sudo docker rm local
+            sudo docker run -d -p 3000:3000 --name local --env-file ~/.appseed/.env.671374853 ${{ secrets.DOCKERHUB_USERNAME }}/671374853
